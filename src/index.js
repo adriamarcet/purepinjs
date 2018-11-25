@@ -9,15 +9,23 @@
  * - pin multiple elements
  */
 
-// VARS
 const element = document.querySelector('.pin');
 const pinClass = 'pinned';
+const elementContainer = document.querySelector('.pin-container');
 
-// FUNCTIONS
+function handlePinContainer(container) {
+  if (container) {
+    // force static position (necessary?)
+    container.style.position = 'static';
+    console.log(container.getBoundingClientRect());
+  } else {
+    return;
+  }
+}
+
 function pin() {
-  console.log(element);
+  handlePinContainer(elementContainer);
   element.classList.add(pinClass);
 }
 
-// TRIGGERS
 pin();
