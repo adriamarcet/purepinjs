@@ -1,2 +1,0 @@
-# purepinjs
-Created with CodeSandbox
